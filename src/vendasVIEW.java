@@ -57,7 +57,7 @@ public class vendasVIEW extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaVendidos = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -80,8 +80,13 @@ public class vendasVIEW extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tabelaVendidos);
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("Voltar");
+        btnVoltar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -98,7 +103,7 @@ public class vendasVIEW extends javax.swing.JFrame {
                         .addGap(46, 46, 46))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(234, 234, 234)
-                .addComponent(jButton1)
+                .addComponent(btnVoltar)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -109,7 +114,7 @@ public class vendasVIEW extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnVoltar)
                 .addGap(59, 59, 59))
         );
 
@@ -119,8 +124,12 @@ public class vendasVIEW extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
